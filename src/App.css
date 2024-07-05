@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+nav ul li a{
+  color: white;
+  transition: all 0.2s;
+}
+
+nav ul li a:hover{
+  color: rgb(51, 115, 198);
+}
+
+.slidersize{
+  width: 1150px;
+  height: 776px;
+}
