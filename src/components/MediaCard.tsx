@@ -153,7 +153,7 @@ const MediaCard: React.FC<MediaCardProps> = ({
               item
               xs={12}
               md={8}
-              sx={{ mt: { xs: 4, md: 0 } }} // xsでは上部マージンを追加
+              sx={{ mt: { xs: 4, md: 8 } }} // xsでは上部マージンを追加
             >
               <SimpleSlider />
             </Grid>
