@@ -2,7 +2,6 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import Pro from "../assets/images/common/profile_image.jpg"
 import { motion } from 'framer-motion';
 
@@ -22,6 +21,12 @@ const ProfileList: React.FC = () => {
                     letterSpacing: '.3rem',
                     color: '#000000',
                     textDecoration: 'none',
+                    fontSize: {
+                        xs: '1.5rem', // スモールスクリーン用
+                        sm: '2rem',   // ミディアムスクリーン用
+                        md: '3rem',   // ラージスクリーン用
+                        lg: '4rem',   // さらに大きなスクリーン
+                      },
                     }}
                 >
                     <motion.div
@@ -66,10 +71,10 @@ const ProfileList: React.FC = () => {
                             viewport={{ once: false, amount: 0 }}
                     >
                     <Box sx={{ width: "100%" ,display:{ xs: 'none', md: 'flex' }}}>
-                        <img style={{ width: "100%", height: "100%", borderRadius: "50%" }} src={Pro} />
+                        <img style={{ width: "100%", height: "100%", borderRadius: "50%" }} src={Pro} alt=""/>
                     </Box>
                     <Box sx={{textAlign: 'center', width: "80%" ,display:{ xs: 'flex', md: 'none' }}}>
-                        <img style={{ width: "50%", height: "30%", borderRadius: "50%" }} src={Pro} />
+                        <img style={{ width: "50%", height: "30%", borderRadius: "50%" }} src={Pro} alt=""/>
                     </Box>
                     </motion.div>
                 </Grid>

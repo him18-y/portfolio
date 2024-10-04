@@ -1,12 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
@@ -16,47 +11,17 @@ import { Link as Scroll } from 'react-scroll';
 import Toolbar from '@mui/material/Toolbar';
 
 import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
-import { useState } from "react";
-import Drawer from "@mui/material/Drawer";
-
-const setNavLinks: Array<{ text: string, url: string }> = [
-    { text: "トップ", url: "/" },
-    { text: "プロフィール", url: "/profile" },
-    { text: "スキル", url: "/skill" },
-    { text: "制作物", url: "/production" },
-    { text: "連絡先", url: "/contact" },
-    { text: "ブログ", url: "/blog" },
-];
 
 const HHeader: React.FC = () => {
-    const [open, setOpen] = useState(false);
-
-    const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
-    const handleDrawerOpen = () => {
-        setOpen(true);
-    }
-
-    const handleDrawerClose = () => {
-        setOpen(false);
-    }
 
   return(
     <>
@@ -67,7 +32,7 @@ const HHeader: React.FC = () => {
                     variant="h6"
                     noWrap
                     component="a"
-                    href="/"
+                    href="/portfolio"
                     sx={{
                     mr: 2,
                     display: { xs: 'none', md: 'flex' },
@@ -150,7 +115,7 @@ const HHeader: React.FC = () => {
                     variant="h6"
                     noWrap
                     component="a"
-                    href="/"
+                    href="/portfolio"
                     sx={{
                     mr: 2,
                     display: { xs: 'flex', md: 'none' },

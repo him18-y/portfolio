@@ -64,6 +64,12 @@ const ContactForm: React.FC = () => {
                     letterSpacing: '.3rem',
                     color: '#000000',
                     textDecoration: 'none',
+                    fontSize: {
+                        xs: '1.5rem', // スモールスクリーン用
+                        sm: '2rem',   // ミディアムスクリーン用
+                        md: '3rem',   // ラージスクリーン用
+                        lg: '4rem',   // さらに大きなスクリーン
+                      },
                     }}
                     >
                         <motion.div
@@ -112,7 +118,7 @@ const ContactForm: React.FC = () => {
                             メールが送信されました。
                         </Box>
                     ) : (
-                        <Stack sx={{ width: "100%" }} component="form" spacing={2} onSubmit={handleSubmit} autoComplete="off">
+                        <Stack sx={{ width: "100%" ,transform: "translateZ(-100px)"}} component="form" spacing={2} onSubmit={handleSubmit} autoComplete="off">
                             <TextField required fullWidth label="メールアドレス" name="email" variant="outlined" value={email} onChange={handleEmailchange} />
                             <TextField required fullWidth multiline rows={4} label="お問い合わせ内容" name="message" variant="outlined" value={message} onChange={handleMessagechange} />
                             {isSending ? (

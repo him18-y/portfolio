@@ -2,7 +2,6 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import { motion } from 'framer-motion';
 
 const About: React.FC = () => {
@@ -21,6 +20,12 @@ const About: React.FC = () => {
                     letterSpacing: '.3rem',
                     color: '#000000',
                     textDecoration: 'none',
+                    fontSize: {
+                        xs: '1.5rem', // スモールスクリーン用
+                        sm: '2rem',   // ミディアムスクリーン用
+                        md: '3rem',   // ラージスクリーン用
+                        lg: '4rem',   // さらに大きなスクリーン
+                      },
                     }}
                 >
                     <motion.div
