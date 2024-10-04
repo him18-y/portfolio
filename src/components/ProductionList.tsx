@@ -3,32 +3,29 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import MediaList from "./MediaCard";
-import p001 from "../assets/images/production/production-001.png"
-import mv11 from "../assets/images/p001/mv11.jpg"
-import mv12 from "../assets/images/p001/mv12.jpg"
-import p002 from "../assets/images/production/production-002.png"
-import mv21 from "../assets/images/p002/mv21.png"
-import mv22 from "../assets/images/p002/mv22.png"
-import mv23 from "../assets/images/p002/mv23.png"
-import mv24 from "../assets/images/p002/mv24.png"
 import { motion } from 'framer-motion';
 const ProductionList: React.FC = () => {
     const setMediaList = [
         {
             'title': 'portfolio',
             'description': "今見ているサイト",
-            'image': p001,
+            'image': `${process.env.PUBLIC_URL}/assets/images/production/production-001.png`,
             'modaltitle': "portfolio",
             'modaltext': `自分のポートフォリオサイトを制作しました。これから色んな制作物を作っていくためそれらをまとめたり、自分がどんな人でどのような技術を持っているかを知ってもらいたいため作りました。\n\nフロントエンドにはReactとTypeScriptを使っています。\n\nGithub: https://him18-y.github.io/portfolio/`,
-            'mvs': [mv11, mv12,]
+            'mvs': [`${process.env.PUBLIC_URL}/assets/images/p001/mv11.jpg`, `${process.env.PUBLIC_URL}/assets/images/p001/mv12.jpg`]
         },
         {
             'title': 'Hidane',
             'description': "イベントの感想共有アプリ",
-            'image': p002,
+            'image': `${process.env.PUBLIC_URL}/assets/images/production/production-002.png`,
             'modaltitle': "Hidane",
             'modaltext': `あるユーザーがイベントを花火として投稿し、他のユーザーがその投稿に対してコメントすることで花火が大きくなっていくアプリを作りました。テーマが”祭り”であるハッカソンに参加した際に制作しました。\nこのアプリは即席チーム三人で一週間かけて制作しました。主に自分がフロントエンドを担当しました。工夫した点は花火をReact-iconsの水滴を使って表現したことと花火大会の雰囲気に合わせたUI設計をしたことです。\n\nフロントエンドではTypeScript,React,Next.js,Tailwindcss、バックエンドではGo,Postman,Google cloudを使いました。\n\nGithub: https://github.com/tomizawakenshin/team17_frontend \n説明資料: https://drive.google.com/file/d/1CyyfnJqfTJwRjRU-wQ0OQDVQl9xjaQQM/view?usp=sharing`,
-            'mvs': [mv21, mv22, mv23, mv24]
+            'mvs': [
+              `${process.env.PUBLIC_URL}/assets/images/p002/mv21.png`, 
+              `${process.env.PUBLIC_URL}/assets/images/p002/mv22.png`, 
+              `${process.env.PUBLIC_URL}/assets/images/p002/mv23.png`, 
+              `${process.env.PUBLIC_URL}/assets/images/p002/mv24.png`
+            ]
         },
         {
             'title': 'タイトル3',
